@@ -25,7 +25,8 @@ module.exports.login = (req, res)=>{
         res.setHeader('x-auth', token).json({token:token})
     })
     .catch((err)=>{
-        res.json({errors:err})
+        //res.json({errors:err})
+        res.json(err)
     })
 }
 
